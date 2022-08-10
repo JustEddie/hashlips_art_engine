@@ -24,7 +24,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 50,
+    growEditionSizeTo: 300,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -84,10 +84,10 @@ const rarityDelimiter = "#";
 const uniqueDnaTorrance = 10000;
 
 const preview = {
-  thumbPerRow: 5,
-  thumbWidth: 100,
+  thumbPerRow: 10,
+  thumbWidth: 1000,
   imageRatio: format.height / format.width,
-  imageName: "preview.png",
+  imageName: "KiminiSamplePreview.png",
 };
 
 const preview_gif = {

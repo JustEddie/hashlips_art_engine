@@ -17,7 +17,7 @@ const {
   debugLogs,
   extraMetadata,
   text,
-  namePrefix,
+  namePrefix = "KiminiSample",
   network,
   solanaMetadata,
   gif,
@@ -74,8 +74,17 @@ const getElements = (path) => {
     .filter((item) => !/(^|\/)\.[^\/\.]/g.test(item))
     .map((i, index) => {
       if (i.includes("-")) {
+        // i.replace("-","zz");
+        // return {
+        //   id: index,
+        //   name: cleanName(i),
+        //   filename: i,
+        //   path: `${path}${i}`,
+        //   weight: getRarityWeight(i),
+        // };
         throw new Error(`layer name can not contain dashes, please fix: ${i}`);
       }
+    
       return {
         id: index,
         name: cleanName(i),
@@ -131,8 +140,8 @@ const drawBackground = () => {
 const addMetadata = (_dna, _edition) => {
   let dateTime = Date.now();
   let tempMetadata = {
-    name: `${namePrefix} #${_edition}`,
-    description: description,
+    name: `Kimini Official Sample #${_edition}`,
+    description: "Kimini official nft - sample https://opensea.io/collection/kimini",
     image: `${baseUri}/${_edition}.png`,
     dna: sha1(_dna),
     edition: _edition,
