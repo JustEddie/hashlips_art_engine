@@ -31,7 +31,7 @@ const layerConfigurations = [
       { name: "Clothes" },
       { name: "Face" },
       { name: "Hair" },
-      
+      { name: "Accessary" }
     ],
   },
 ];
